@@ -3,48 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Operators</title>
+    <title>Conditional statements</title>
     <style></style>
   </head>
   <body>
     <script>
-      console.log("Javascript Operators");
-      //Arithematic Opertors
-      let a = 10;
-      let b = 3;
-      console.log("a + b =", a + b);
-      console.log("a - b =", a - b);
-      console.log("a / b =", a / b);
-      console.log("a * b =", a * b);
-      console.log("a % b =", a % b);
-      console.log("a++ =", a++);
-      console.log("a  =", a);
-      console.log("b-- =", b--);
-      console.log("b  =", b);
-      console.log("--b =", --b);
-      console.log("b  =", b);
+      console.log(" Conditional statements");
+      let a = prompt("Hey,whats your age");
+      a = Number.parseInt(a); //converting the string into number
 
-      //Assignment Operators
-      let x = 1;
-      x += 15; //same as x = x+ 5
+      if (a < 0) {
+        alert("you entered invalid age");
+      } else if (a < 9) {
+        alert("you are a kid and cannot think of driving");
+      } else if (a < 20 && a >= 9) {
+        alert("you are a teangeer and think of driving after 20");
+      } else {
+        alert("you are valid for driving");
+      }
+
+      console.log(a);
+      //   //ternery operators
+      console.log("you can ", [a < 18 ? "not drive" : "drive"]);
+
+      // switch statements
+      let expr = "Cherries";
+      switch (expr) {
+        case "oranges":
+          console.log("oOranges are $0.59 a pound.");
+          break;
+        case "mangoes":
+          console.log("mangoes are $1.5 a pound");
+          break;
+        case "Bananas":
+          console.log("Bananas are $0.48 a pound.");
+          break;
+        case "Cherries":
+          console.log("Cherries are $3.00 a pound.");
+          break;
+        case "Mangoes":
+        case "Papayas":
+          console.log("Mangoes and papayas are $2.79 a pound.");
+          break;
+        default:
+          console.log(`Sorry, we are out of ${expr}.`);
+      }
+
+      console.log("is there is any thing yyou'd like? ");
+
+      // practice questions
+
+      //01
+
+      let age = prompt("what s your age??");
+      if (age > 10 && age < 20) {
+        console.log("your age lies between 10 and 20");
+      } else {
+        console.log("your age  is not lies between 10 and 20");
+      }
+
+      //02
+
+      let agee = prompt("what s your age??");
+
+      switch (agee) {
+        case "12":
+          console.log("your age is 12");
+          break;
+        case "13":
+          console.log("your age is 13");
+          break;
+        case "14":
+          console.log("your age is 14");
+          break;
+        case "15":
+          console.log("your age is 15");
+          break;
+        default:
+          console.log("your age is not special");
+          break;
+      }
+
+      //03
+      let _num = prompt("Enter te number??");
+      num = Number.parseInt(_num);
+
+      if (_num % 2 == 0 && _num % 3 == 0) {
+        console.log("Your number is divisible by 2 and 3");
+      } else {
+        console.log("Your number is not divisible by 2 and 3");
+      }
+      console.log(_num);
+
+      //04
+      let num = prompt("Enter te number??");
+      num = Number.parseInt(num);
+      if (num % 2 == 0 || num % 3 == 0) {
+        console.log("Your number is divisible by 2 or 3");
+      } else {
+        console.log("Your number is not divisible by 2 or 3");
+      }
+      console.log(num);
+
+      //05
+      let Age = 19;
+      let x = Age > 18 ? "you can drive" : "You cannot drive";
+
       console.log(x);
-
-      //comparison operator
-      let comp1 = 6;
-      let comp2 = 7;
-      console.log("comp1 == comp2 is ", comp1 == comp2);
-      console.log("comp1 != comp2 is ", comp1 != comp2);
-      console.log("comp1 === comp2 is ", comp1 === comp2);
-      console.log("comp1 !== comp2 is ", comp1 !== comp2);
-
-      //logical operators
-
-      let y = 5;
-      let z = 6;
-      console.log(x > y && x == 5);
-      console.log(x > y || x == 5);
-      console.log(!false);
-      console.log(!true);
     </script>
   </body>
 </html>
