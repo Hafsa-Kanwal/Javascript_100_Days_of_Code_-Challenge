@@ -1,3 +1,4 @@
+
 //while loop
       let n = prompt("Enter the number");
       n = Number.parseInt(n);
@@ -15,3 +16,7 @@
         console.log(i);
         i++;
       } while (i < n);
+
+
+      console.log(dictionery.respect);
+
